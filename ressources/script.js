@@ -3,6 +3,10 @@ const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.conteneur, footer, #header');
+const annee = document.getElementById('anneeauto');
+// Automatic year update according to the current date
+annee.textContext = new Date().getFullYear();
+
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
@@ -60,4 +64,5 @@ function updateActiveNav() {
             link.classList.add('active');
         }
     });
+
 }
